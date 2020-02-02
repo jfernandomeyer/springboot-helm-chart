@@ -53,9 +53,6 @@ phases:
   phaseSteps:
   - type: HELM_DEPLOY
     name: Deploy Containers
-    steps:
-    - type: HELM_DEPLOY
-      name: Helm Deploy
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
