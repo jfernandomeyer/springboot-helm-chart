@@ -22,3 +22,21 @@ pipelineStages:
     type: DO_NOT_SKIP
   stageName: STAGE 3
   workflowName: spring-workflow-staging
+- type: APPROVAL
+  name: Approval 3
+  parallel: false
+  properties:
+    userGroups:
+    - TGHqIb1oT1OzI5k2N2Dg6A
+    - XNj8MspCRZO5xZ10yb2BZA
+    pipelineStageElementId: j0Ki0jFHRpaW7Q04yeqFpQ
+    stageName: STAGE 4
+    disable: false
+    timeoutMillis: 604800000
+    disableAssertion: null
+    pipelineStageParallelIndex: 4
+    approvalStateType: USER_GROUP
+    pipelineId: haHkYNCmTAm7G4kuoPF_tA
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 4
