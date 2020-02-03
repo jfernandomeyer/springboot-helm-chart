@@ -1,7 +1,7 @@
 harnessApiVersion: '1.0'
 type: BLUE_GREEN
 concurrencyStrategy: INFRA
-envName: staging
+envName: production
 failureStrategies:
 - executionScope: WORKFLOW
   failureTypes:
@@ -20,7 +20,7 @@ phases:
 - type: HELM
   computeProviderName: labs-k8s-cluster
   daemonSet: false
-  infraDefinitionName: labs-k8s
+  infraDefinitionName: production
   name: Phase 1
   phaseSteps:
   - type: HELM_DEPLOY
@@ -49,7 +49,7 @@ rollbackPhases:
 - type: HELM
   computeProviderName: labs-k8s-cluster
   daemonSet: false
-  infraDefinitionName: labs-k8s
+  infraDefinitionName: production
   name: Rollback Phase 1
   phaseNameForRollback: Phase 1
   phaseSteps:
