@@ -29,7 +29,7 @@ pipelineStages:
     userGroups:
     - TGHqIb1oT1OzI5k2N2Dg6A
     - XNj8MspCRZO5xZ10yb2BZA
-    pipelineStageElementId: j0Ki0jFHRpaW7Q04yeqFpQ
+    pipelineStageElementId: PuEbAPYwRB6OUzWueYwNsw
     stageName: STAGE 4
     disable: false
     timeoutMillis: 604800000
@@ -40,3 +40,10 @@ pipelineStages:
   skipCondition:
     type: DO_NOT_SKIP
   stageName: STAGE 4
+- type: ENV_STATE
+  name: production
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 5
+  workflowName: spring-workflow-production
