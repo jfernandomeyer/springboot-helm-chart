@@ -25,6 +25,13 @@ phases:
   phaseSteps:
   - type: HELM_DEPLOY
     name: Deploy Containers
+    steps:
+    - type: HELM_DEPLOY
+      name: Helm Deploy
+      properties:
+        gitFileConfig: null
+        helmReleaseNamePrefix: spring-release-development
+        steadyStateTimeout: 600000
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
