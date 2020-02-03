@@ -43,7 +43,7 @@ phases:
     name: Wrap Up
     stepsInParallel: false
   provisionNodes: false
-  serviceName: springboot-servoce
+  serviceName: springboot-service
   statefulSet: false
 rollbackPhases:
 - type: HELM
@@ -70,6 +70,6 @@ rollbackPhases:
     name: Wrap Up
     stepsInParallel: false
   provisionNodes: false
-  serviceName: springboot-servoce
+  serviceName: springboot-service
   statefulSet: false
 templatized: false
