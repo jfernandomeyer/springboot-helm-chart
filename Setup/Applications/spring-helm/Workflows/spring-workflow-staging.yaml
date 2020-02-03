@@ -1,7 +1,7 @@
 harnessApiVersion: '1.0'
 type: BLUE_GREEN
 concurrencyStrategy: INFRA
-envName: test
+envName: staging
 failureStrategies:
 - executionScope: WORKFLOW
   failureTypes:
