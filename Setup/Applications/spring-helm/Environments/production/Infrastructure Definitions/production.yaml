@@ -5,5 +5,5 @@ deploymentType: HELM
 infrastructure:
 - type: DIRECT_KUBERNETES
   cloudProviderName: labs-k8s-cluster
-  namespace: prodcution
+  namespace: production
   releaseName: ${infra.kubernetes.infraId}
