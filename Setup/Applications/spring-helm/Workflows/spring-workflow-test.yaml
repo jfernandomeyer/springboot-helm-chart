@@ -31,7 +31,7 @@ phases:
       properties:
         gitFileConfig: null
         helmReleaseNamePrefix: spring-release-test
-        steadyStateTimeout: 600000
+        steadyStateTimeout: 10
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
