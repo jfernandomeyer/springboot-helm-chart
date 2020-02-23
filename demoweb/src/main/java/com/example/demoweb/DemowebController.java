@@ -11,7 +11,7 @@ public class DemowebController {
 
     @GetMapping("/")
     public String home() {
-        return "Hello World.";
+        return "Hello World changed from CI/CD.";
     }
 
 }
