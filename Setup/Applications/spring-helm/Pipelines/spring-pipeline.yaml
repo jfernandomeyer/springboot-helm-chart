@@ -1,0 +1,49 @@
+harnessApiVersion: '1.0'
+type: PIPELINE
+pipelineStages:
+- type: ENV_STATE
+  name: development
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 1
+  workflowName: spring-workflow-development
+- type: ENV_STATE
+  name: test
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 2
+  workflowName: spring-workflow-test
+- type: ENV_STATE
+  name: staging
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 3
+  workflowName: spring-workflow-staging
+- type: APPROVAL
+  name: Approval 3
+  parallel: false
+  properties:
+    userGroups:
+    - TGHqIb1oT1OzI5k2N2Dg6A
+    - XNj8MspCRZO5xZ10yb2BZA
+    pipelineStageElementId: PuEbAPYwRB6OUzWueYwNsw
+    stageName: STAGE 4
+    disable: false
+    timeoutMillis: 604800000
+    disableAssertion: null
+    pipelineStageParallelIndex: 4
+    approvalStateType: USER_GROUP
+    pipelineId: haHkYNCmTAm7G4kuoPF_tA
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 4
+- type: ENV_STATE
+  name: production
+  parallel: false
+  skipCondition:
+    type: DO_NOT_SKIP
+  stageName: STAGE 5
+  workflowName: spring-workflow-production

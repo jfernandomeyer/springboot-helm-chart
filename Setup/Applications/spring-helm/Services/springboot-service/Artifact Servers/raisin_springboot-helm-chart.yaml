@@ -1,0 +1,5 @@
+harnessApiVersion: '1.0'
+type: ECR
+imageName: raisin/springboot-helm-chart
+region: eu-central-1
+serverName: labs-infra
